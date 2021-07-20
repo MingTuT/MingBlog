@@ -25,7 +25,7 @@ module.exports = {
     sidebar: [
       {
         title: 'HTML+CSS',
-        collapsable: true,
+        collapsable: false,
         children: [
           { title: 'HTML', path: '/basics/html' },
           { title: 'CSS', path: '/basics/css' }

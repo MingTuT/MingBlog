@@ -38,12 +38,164 @@ export const siteData = {
       "path": "/"
     },
     {
-      "title": "css",
+      "title": "CSS",
       "frontmatter": {},
       "regularPath": "/basics/css.html",
       "relativePath": "basics/css.md",
       "key": "v-6be6abc7",
-      "path": "/basics/css.html"
+      "path": "/basics/css.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "position 几个属性的作用",
+          "slug": "position-几个属性的作用"
+        },
+        {
+          "level": 2,
+          "title": "px，em，rem 的区别",
+          "slug": "px-em-rem-的区别"
+        },
+        {
+          "level": 2,
+          "title": "怎么让一个不定宽高的 DIV，垂直水平居中",
+          "slug": "怎么让一个不定宽高的-div-垂直水平居中"
+        },
+        {
+          "level": 2,
+          "title": "CSS实现居中",
+          "slug": "css实现居中"
+        },
+        {
+          "level": 3,
+          "title": "文字居中",
+          "slug": "文字居中"
+        },
+        {
+          "level": 3,
+          "title": "图片居中",
+          "slug": "图片居中"
+        },
+        {
+          "level": 3,
+          "title": "元素居中",
+          "slug": "元素居中"
+        },
+        {
+          "level": 2,
+          "title": "BFC(Block formatting context)",
+          "slug": "bfc-block-formatting-context"
+        },
+        {
+          "level": 3,
+          "title": "BFC的布局规则",
+          "slug": "bfc的布局规则"
+        },
+        {
+          "level": 3,
+          "title": "如何创建BFC",
+          "slug": "如何创建bfc"
+        },
+        {
+          "level": 3,
+          "title": "BFC的作用",
+          "slug": "bfc的作用"
+        },
+        {
+          "level": 2,
+          "title": "CSS 权重",
+          "slug": "css-权重"
+        },
+        {
+          "level": 2,
+          "title": "清除浮动的方式",
+          "slug": "清除浮动的方式"
+        },
+        {
+          "level": 2,
+          "title": "渐进增强和优雅降级",
+          "slug": "渐进增强和优雅降级"
+        },
+        {
+          "level": 2,
+          "title": "为什么利用多个域名来存储网站资源会更有效",
+          "slug": "为什么利用多个域名来存储网站资源会更有效"
+        },
+        {
+          "level": 2,
+          "title": "网页的重绘与重排以及重构",
+          "slug": "网页的重绘与重排以及重构"
+        },
+        {
+          "level": 2,
+          "title": "CSS3 新特性",
+          "slug": "css3-新特性"
+        },
+        {
+          "level": 2,
+          "title": "CSS 小细节",
+          "slug": "css-小细节"
+        },
+        {
+          "level": 3,
+          "title": "CSS 引入的方式",
+          "slug": "css-引入的方式"
+        },
+        {
+          "level": 3,
+          "title": "link 和 @import 的区别",
+          "slug": "link-和-import-的区别"
+        },
+        {
+          "level": 3,
+          "title": "CSS Reset",
+          "slug": "css-reset"
+        },
+        {
+          "level": 3,
+          "title": "Web 语义化",
+          "slug": "web-语义化"
+        },
+        {
+          "level": 3,
+          "title": "inline ， block， inline-blockd的区别",
+          "slug": "inline-block-inline-blockd的区别"
+        },
+        {
+          "level": 3,
+          "title": "display： none；与 visibility： hidden 的区别",
+          "slug": "display-none-与-visibility-hidden-的区别"
+        },
+        {
+          "level": 3,
+          "title": "CSS Hack",
+          "slug": "css-hack"
+        },
+        {
+          "level": 3,
+          "title": "overflow 属性值",
+          "slug": "overflow-属性值"
+        },
+        {
+          "level": 3,
+          "title": "console 常用的方法",
+          "slug": "console-常用的方法"
+        },
+        {
+          "level": 3,
+          "title": "rgba() 和 opacity 的区别",
+          "slug": "rgba-和-opacity-的区别"
+        },
+        {
+          "level": 3,
+          "title": "Sass、LESS",
+          "slug": "sass、less"
+        },
+        {
+          "level": 3,
+          "title": "行内元素、块级元素、空(void)元素、样式之间的转换",
+          "slug": "行内元素、块级元素、空-void-元素、样式之间的转换"
+        }
+      ]
     },
     {
       "title": "HTML",
@@ -70,6 +222,11 @@ export const siteData = {
         },
         {
           "level": 2,
+          "title": "Doctype 作用",
+          "slug": "doctype-作用"
+        },
+        {
+          "level": 2,
           "title": "Label标签",
           "slug": "label标签"
         },
@@ -90,8 +247,78 @@ export const siteData = {
         },
         {
           "level": 2,
+          "title": "img标签上的title和alt属性的区别",
+          "slug": "img标签上的title和alt属性的区别"
+        },
+        {
+          "level": 2,
           "title": "前端页面的三层结构",
           "slug": "前端页面的三层结构"
+        },
+        {
+          "level": 2,
+          "title": "div+css 的布局较 table 布局有什么优点",
+          "slug": "div-css-的布局较-table-布局有什么优点"
+        },
+        {
+          "level": 2,
+          "title": "Canvas 和 SVG 的区别",
+          "slug": "canvas-和-svg-的区别"
+        },
+        {
+          "level": 2,
+          "title": "viewport",
+          "slug": "viewport"
+        },
+        {
+          "level": 3,
+          "title": "viewport属性值",
+          "slug": "viewport属性值"
+        },
+        {
+          "level": 2,
+          "title": "建议 CSS 的<link>标签放在<head>标签之间",
+          "slug": "建议-css-的-link-标签放在-head-标签之间"
+        },
+        {
+          "level": 2,
+          "title": "建议 JS 的<script>标签放在</body>标签之前",
+          "slug": "建议-js-的-script-标签放在-body-标签之前"
+        },
+        {
+          "level": 2,
+          "title": "渐进式渲染（progressive rendering）",
+          "slug": "渐进式渲染-progressive-rendering"
+        },
+        {
+          "level": 2,
+          "title": "DOM 和 BOM",
+          "slug": "dom-和-bom"
+        },
+        {
+          "level": 2,
+          "title": "DOM Tree 的构建",
+          "slug": "dom-tree-的构建"
+        },
+        {
+          "level": 2,
+          "title": "前端需要注意的 SEO （搜索引擎优化）",
+          "slug": "前端需要注意的-seo-搜索引擎优化"
+        },
+        {
+          "level": 2,
+          "title": "浏览器内核的理解",
+          "slug": "浏览器内核的理解"
+        },
+        {
+          "level": 2,
+          "title": "attribute 和 property 的区别",
+          "slug": "attribute-和-property-的区别"
+        },
+        {
+          "level": 2,
+          "title": "async 和 defer 的作用和区别",
+          "slug": "async-和-defer-的作用和区别"
         }
       ]
     }
@@ -124,7 +351,7 @@ export const siteData = {
     "sidebar": [
       {
         "title": "HTML+CSS",
-        "collapsable": true,
+        "collapsable": false,
         "children": [
           {
             "title": "HTML",
