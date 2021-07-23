@@ -4,7 +4,7 @@ heroImage: /home.jpg
 heroText: Ming's Blog
 tagline: Ming的学习簿
 actionText: 瞧一瞧
-actionLink: /basics/html/
+actionLink: /blog/basics/html/
 features:
 - title: 学习
   details: 学而不思则罔 | 思而不学则殆

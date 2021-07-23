@@ -21,20 +21,52 @@ export const routes = [
     redirect: "/"
   },
   {
-    name: "v-6be6abc7",
-    path: "/basics/css.html",
+    name: "v-b8c4d480",
+    path: "/blog/basics/css.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-6be6abc7").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-b8c4d480").then(next)
     },
   },
   {
-    name: "v-fe83f9a6",
-    path: "/basics/html.html",
+    name: "v-d7b0c048",
+    path: "/blog/basics/html.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-fe83f9a6").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-d7b0c048").then(next)
     },
+  },
+  {
+    name: "v-feba9738",
+    path: "/blog/javascript/%E5%9F%BA%E7%A1%80.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-feba9738").then(next)
+    },
+  },
+  {
+    path: "/blog/javascript/基础.html",
+    redirect: "/blog/javascript/%E5%9F%BA%E7%A1%80.html"
+  },
+  {
+    path: "/blog/javascript/基础.html",
+    redirect: "/blog/javascript/%E5%9F%BA%E7%A1%80.html"
+  },
+  {
+    name: "v-4ee5ef60",
+    path: "/blog/javascript/%E9%97%AE%E9%A2%98.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-4ee5ef60").then(next)
+    },
+  },
+  {
+    path: "/blog/javascript/问题.html",
+    redirect: "/blog/javascript/%E9%97%AE%E9%A2%98.html"
+  },
+  {
+    path: "/blog/javascript/问题.html",
+    redirect: "/blog/javascript/%E9%97%AE%E9%A2%98.html"
   },
   {
     path: '*',

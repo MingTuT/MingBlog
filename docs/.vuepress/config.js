@@ -14,24 +14,36 @@ module.exports = {
       {
         text: 'HTML+CSS',
         items: [
-          { text: 'HTML', link: '/basics/html/' },
-          { text: 'CSS', link: '/basics/css/' }
+          { text: 'HTML', link: '/blog/basics/html' },
+          { text: 'CSS', link: '/blog/basics/css' }
         ]
       },
-      { text: 'JS', link: '/algorithm/' },
+      { text: 'JavaScript', link: '/blog/javascript/基础' },
+      
       { text: 'Vue', link: 'https://baidu.com' }
     ],
-    // 侧边栏配置
-    sidebar: [
-      {
-        title: 'HTML+CSS',
-        collapsable: false,
-        children: [
-          { title: 'HTML', path: '/basics/html' },
-          { title: 'CSS', path: '/basics/css' }
-        ]
-      }
-    ],
-    sidebarDepth: 2, // 侧边栏显示2级
+    sidebar: {
+      '/blog/basics/': [{
+      title: 'HTML+CSS',
+      collapsable: false, 
+      sidebarDepth: 2,
+      children: [
+        { title: 'HTML', path:'/blog/basics/html'},
+        { title: 'CSS', path:'/blog/basics/css'}
+      ]
+    }],
+      '/blog/javascript/': [{
+      title: 'JavaScript',
+      collapsable: false,
+      sidebarDepth: 2,
+      children: [
+        { title: '基础', path:'/blog/javascript/基础' },
+        { title: '问题', path:'/blog/javascript/问题' }
+      ]
+    }],
+      
+    }
+
+
   }
 };

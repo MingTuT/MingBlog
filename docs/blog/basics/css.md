@@ -4,9 +4,17 @@
 > **position 的常见四个属性值： relative，absolute，fixed，static。一般都要配合"left"、"top"、"right"
 以及 "bottom" 属性使用。**
 
-|static|relative|absolute|fixed|
-|------|--------|--------|-----|
-|默认位置，设置为 static 的元素，它始终会处于页面流给予的位置（static 元素会忽略任何 top、bottom、left 或 right 声明）。一般不常用。|位置被设置为 relative 的元素，**可将其移至相对于其正常位置的地方**，意思就是如果设置了 relative 值，那么，它偏移的 top，right，bottom，left 的值都以它原来的位置为基准偏移，而不管其他元素会怎么样。<font color=#c7254e>注意 relative 移动后的元素在原来的位置仍占据空间。</font>|位置设置为 absolute 的元素，可定位于相对于包含它的元素的指定坐标。意思就是如果它的父容器设置了 position 属性，并且 position 的属性值为 absolute 或者 relative，那么就会依据父容器进行偏移。如果其父容器没有设置 position 属性，那么偏移是以 body 为依据。<font color=#c7254e>注意设置 absolute 属性的元素在标准流中不占位置。</font>|位置被设置为 fixed 的元素，**可定位于相对于浏览器窗口的指定坐标。不论窗口滚动与否，元素都会留在那个位置。它始终是以 body 为依据的。** <font color=#c7254e>注意设置 fixed 属性的元素在标准流中不占位置。</font>|
+::: warning Position
+static: 默认值，它始终会处于页面流给予的位置（static 元素会忽略任何 top、bottom、left 或 right 声明）。一般不常用。  
+
+relative: **可将其移至相对于其正常位置的地方**，意思就是如果设置了 relative 值，那么，它偏移的 top，right，bottom，left 的值都以它原来的位置为基准偏移，而不管其他元素会怎么样。<font color=#c7254e>注意 relative 移动后的元素在原来的位置仍占据空间。</font>
+
+absolute: 可定位于相对于包含它的元素的指定坐标。意思就是如果它的父容器设置了 position 属性，并且 position 的属性值为 absolute 或者 relative，那么就会依据父容器进行偏移。如果其父容器没有设置 position 属性，那么偏移是以 body 为依据。<font color=#c7254e>注意设置 absolute 属性的元素在标准流中不占位置。</font>  
+
+fixed: 位置被设置为 fixed 的元素，**可定位于相对于浏览器窗口的指定坐标。不论窗口滚动与否，元素都会留在那个位置。它始终是以 body 为依据的。** <font color=#c7254e>注意设置 fixed 属性的元素在标准流中不占位置。</font>  
+
+sticky: sticky 是 css 定位新增属性；可以说是 static（没有定位） 和 固定定位 fixed 的结合；它主要用在对 scroll 事件的监听上；简单来说，在滑动过程中，某个元素距离其父元素的距离达到 sticky 粘性定位的要求时(比如top：100px)；position:sticky 这时的效果相当于 fixed 定位，固定到适当位置。
+:::
 
 ## px，em，rem 的区别
 + 像素 px 是相对于显示器屏幕分辨率而言的，是一个虚拟长度单位。
@@ -84,6 +92,20 @@
       }
     ```
     
+## Flex布局
+::: tip 基本概念
+采用 Flex 布局的元素，称为 Flex 容器（flex container），简称"容器"。它的所有子元素自动成为容器成员，称为 Flex 项目（flex item），简称"项目"。
+
+在 Flexbox 模型中，有三个核心概念：
++ flex 容器，其包含 flex 项
++ flex 项（注：也称 flex 子元素），需要布局的元素
++ 排列方向（direction），这决定了 flex 项的布局方向  
+
+![flex](./flex.png)
+:::
+![flex-container](./flex-container.png)
+![flex-item](./flex-item.png)
+[参考](https://www.cnblogs.com/hellocd/p/10443237.html)
 
 
 ## BFC(Block formatting context)
@@ -136,7 +158,7 @@ CSS 权重优先级顺序：!important > 行内样式 > ID > 类、伪类、属�
        line-height：0；
        clear：both；
        }
-       /*给IE6清除浮动*/
+       /*触发hasLayout 给IE6清除浮动*/
       .clearfix{zoom：1}  
      ```
 4. 父级 div 定义 overflow：hidden
@@ -242,13 +264,95 @@ HTTP 服务器的文件缓存
 13. 3D 转换
 14. 字体图标 font-face
 15. 弹性布局 flex
+### CSS3 box-sizing
+  + box-sizing: content-box; 表示标准的盒子模型
+    - 标准的盒子模型的宽度 = content+padding+border
+  + box-sizing: border-box; 表示的是 IE 盒子模型（width = content + padding + border）
+    - IE 盒子模型的宽度 = width
+  + box-sizing: padding-box; 这个属性值的宽度包含了左右 padding + width
+
+### [CSS Grid 网格布局教程](https://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html)
+
+## 伪类与伪元素
+**伪类的操作对象是文档树中已有的元素，而伪元素则创建了一个文档数外的元素。**  
+**因此，伪类与伪元素的区别在于：有没有创建一个文档树之外的元素。**  
+**伪类和选择器之间用一个冒号隔开，伪元素则是两个冒号隔。**
+![伪类](./weilei.jpg)
+![伪元素](./weiyuansu.jpg)
+
+## transition（过渡） transform（变换） animation（动画）
++ transform：描述了元素的静态样式，本身不会呈现动画效果，可以对元素进行 旋转rotate、扭曲skew、缩放scale和移动translate以及矩阵变形matrix。
+  ![transform](./transform.png)
+  [参考](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform)
++ transition样式过渡，从一种效果逐渐改变为另一种效果
+  - **transition: transition-property transition-duration transition-timing-function transition-delay**  
+    * transition-property: 过渡属性(默认值为all)
+    * transition-duration: 过渡持续时间(默认值为0s)
+    * transiton-timing-function: 过渡函数(默认值为ease函数)
+    * transition-delay: 过渡延迟时间(默认值为0s) 
+
+**<font color="red">transition 通常和 hover 等事件配合使用，需要由事件来触发过渡</font>**
+  ``` css
+  div{
+      width：100px;
+      height:100px;
+      transition:transform 2s;
+  }
+  div：hover{
+      transform:rotate(180deg);
+  }
+  ```
++ animation动画 由@keyframes来描述每一帧的样式
+  ``` css
+  div{
+     animation:myAnimation 5s infinite
+  }
+  @keyframes myAnimation{
+      0% {left:0; transform:rotate(0);}
+      100% {left:200px; transform:rotate(180deg);}　　  
+  }
+  ```
+::: danger 区别
+（1）transform 仅描述元素的静态样式，常常配合 transition 和 animation 使用
+
+（2）transition 通常和 hover 等事件配合使用，animation 是自发的，立即播放
+
+（3）animation 可设置循环次数
+
+（4）animation 可设置每一帧的样式和时间，transition 只能设置头尾
+:::
 
 ## CSS 小细节
 ### CSS 引入的方式
 内联 内嵌 外链 导入
 
+### 块元素和行元素
++ 块元素：独占一行，并且有自动填满父元素，可以设置 margin 和 pading 以及高度和宽度
++ 行元素：不会独占一行，width 和 height 会失效，并且在垂直方向的 padding 和 margin 会失效。
+
+### 文本省略号
+#### 单行元素的文本省略号
+``` css
+  overflow: hidden;  
+  text-overflow: ellipsis;  
+  white-space: nowrap;  
+```
+#### 多行元素的文本省略号
+``` css
+  /*使文字数量不同在相同的地方显示，给盒子加固定高度 */
+
+  overflow: hidden;
+  /*将盒子转换为弹性盒子*/
+  display: -webkit-box; 
+  /*设置显示多少行*/
+  -webkit-line-clamp: 2; 
+  /*文本以省略号显示*/   
+  text-overflow: ellipsis; 
+```
+
 ### link 和 @import 的区别
-+ @import 是 CSS 提供的语法规则，只有导入样式表的作用；link 是 HTML 提供的标签，不仅可以加载 CSS 文件，还可以定义 RSS、rel 连接属性等。  
++ @import 是 CSS 提供的语法规则，只有导入样式表的作用；  
+  link 是 HTML 提供的标签，不仅可以加载 CSS 文件，还可以定义 RSS、rel 连接属性等。  
 + 加载页面时，link 标签引入的 CSS 被同时加载；@import引入的 CSS 将在页面加载完毕后被加载。
 + link 引入的样式权重大于 @import 引入的样式。
 
@@ -323,9 +427,54 @@ Less 是一种动态样式语言. 将 CSS 赋予了动态语言的特性，如�
   - display：inline 块级元素转换为行内元素
   - display：inline-block 转为内联元素
 
+### visibility=hidden, opacity=0，display:none
++ visibility = hidden
+  - 该元素隐藏起来了，但不会改变页面布局。
+  - 元素上绑定的事件无法触发。
++ opacity = 0
+  - 元素隐藏起来了，但不会改变页面布局。
+  - 元素上面绑定的事件(click)是**可以触发的。**
++ display: none
+  - 元素隐藏起来，**并且会改变页面布局。**
+  - 元素上绑定的事件无法触发。
 
+### 隐藏页面中某个元素的几种方法
+``` css
+display:none; 
+visibility:hidden; 
+opacity: 0; 
+position 移到外部;
+z-index 涂层遮盖等等
+```
 
+### 外边距折叠
+::: tip
+多个相邻（兄弟或者父子关系）普通流的 **块元素 垂直方向** marigin 会重叠  
+折叠的结果为：  
+两个相邻的外边距都是正数时，折叠结果是它们两者之间较大的值。  
+两个相邻的外边距都是负数时，折叠结果是两者绝对值的较大值。  
+两个外边距一正一负时，折叠结果是两者的相加的和。  
+:::
 
+### float 的元素，display 是什么
+**display 为 block** 
 
+### calc 属性
+**calc 用户动态计算长度值，任何长度值都可以使用 calc()函数计算，*需要注意的是，运算符前后都需要保留一个空格*，例如：width: calc(100% - 10px)；**
 
+### display：table 和 `<table>`
+::: warning 区别
+display：table 的 css 声明能够让一个html 元素和它的子节点像 table 元素一样，使用基于表格的 css 布局，是我们能够轻松定义一个单元格的边界，背景等样式，而不会产生因为使用了 table 那样的制表标签导致的语义化问题。
 
+之所以现在逐渐淘汰了 table 系表格元素，是因为用 div+css 编写出来的文件比用 table边写出来的文件小，而且 table 必须在页面完全加载后才显示，div 则是逐行显示，table的嵌套性太多，没有 div 简洁。
+:::
+
+### line-height 和 height 的区别
++ line-height 一般是指布局里面一段文字上下行之间的高度，是针对字体来设置的。
++ height 一般是指容器的整体高度。
+
+### 如何不在本身上进行操作，改变一个 DOM 元素的字体颜色
+更改父元素的 color
+
+### 设置一个元素的背景颜色，背景颜色会填充哪些区域
+**background-color 设置的背景颜色会填充元素的 content、padding、border 区域。**

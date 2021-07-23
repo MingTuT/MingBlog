@@ -15,7 +15,7 @@ export const siteData = {
         "heroText": "Ming's Blog",
         "tagline": "Ming的学习簿",
         "actionText": "瞧一瞧",
-        "actionLink": "/basics/html/",
+        "actionLink": "/blog/basics/html/",
         "features": [
           {
             "title": "学习",
@@ -40,10 +40,10 @@ export const siteData = {
     {
       "title": "CSS",
       "frontmatter": {},
-      "regularPath": "/basics/css.html",
-      "relativePath": "basics/css.md",
-      "key": "v-6be6abc7",
-      "path": "/basics/css.html",
+      "regularPath": "/blog/basics/css.html",
+      "relativePath": "blog/basics/css.md",
+      "key": "v-b8c4d480",
+      "path": "/blog/basics/css.html",
       "headers": [
         {
           "level": 2,
@@ -79,6 +79,11 @@ export const siteData = {
           "level": 3,
           "title": "元素居中",
           "slug": "元素居中"
+        },
+        {
+          "level": 2,
+          "title": "Flex布局",
+          "slug": "flex布局"
         },
         {
           "level": 2,
@@ -131,6 +136,26 @@ export const siteData = {
           "slug": "css3-新特性"
         },
         {
+          "level": 3,
+          "title": "CSS3 box-sizing",
+          "slug": "css3-box-sizing"
+        },
+        {
+          "level": 3,
+          "title": "CSS Grid 网格布局教程",
+          "slug": "css-grid-网格布局教程"
+        },
+        {
+          "level": 2,
+          "title": "伪类与伪元素",
+          "slug": "伪类与伪元素"
+        },
+        {
+          "level": 2,
+          "title": "transition（过渡） transform（变换） animation（动画）",
+          "slug": "transition-过渡-transform-变换-animation-动画"
+        },
+        {
           "level": 2,
           "title": "CSS 小细节",
           "slug": "css-小细节"
@@ -139,6 +164,16 @@ export const siteData = {
           "level": 3,
           "title": "CSS 引入的方式",
           "slug": "css-引入的方式"
+        },
+        {
+          "level": 3,
+          "title": "块元素和行元素",
+          "slug": "块元素和行元素"
+        },
+        {
+          "level": 3,
+          "title": "文本省略号",
+          "slug": "文本省略号"
         },
         {
           "level": 3,
@@ -194,16 +229,61 @@ export const siteData = {
           "level": 3,
           "title": "行内元素、块级元素、空(void)元素、样式之间的转换",
           "slug": "行内元素、块级元素、空-void-元素、样式之间的转换"
+        },
+        {
+          "level": 3,
+          "title": "visibility=hidden, opacity=0，display:none",
+          "slug": "visibility-hidden-opacity-0-display-none"
+        },
+        {
+          "level": 3,
+          "title": "隐藏页面中某个元素的几种方法",
+          "slug": "隐藏页面中某个元素的几种方法"
+        },
+        {
+          "level": 3,
+          "title": "外边距折叠",
+          "slug": "外边距折叠"
+        },
+        {
+          "level": 3,
+          "title": "float 的元素，display 是什么",
+          "slug": "float-的元素-display-是什么"
+        },
+        {
+          "level": 3,
+          "title": "calc 属性",
+          "slug": "calc-属性"
+        },
+        {
+          "level": 3,
+          "title": "display：table 和 <table>",
+          "slug": "display-table-和-table"
+        },
+        {
+          "level": 3,
+          "title": "line-height 和 height 的区别",
+          "slug": "line-height-和-height-的区别"
+        },
+        {
+          "level": 3,
+          "title": "如何不在本身上进行操作，改变一个 DOM 元素的字体颜色",
+          "slug": "如何不在本身上进行操作-改变一个-dom-元素的字体颜色"
+        },
+        {
+          "level": 3,
+          "title": "设置一个元素的背景颜色，背景颜色会填充哪些区域",
+          "slug": "设置一个元素的背景颜色-背景颜色会填充哪些区域"
         }
       ]
     },
     {
       "title": "HTML",
       "frontmatter": {},
-      "regularPath": "/basics/html.html",
-      "relativePath": "basics/html.md",
-      "key": "v-fe83f9a6",
-      "path": "/basics/html.html",
+      "regularPath": "/blog/basics/html.html",
+      "relativePath": "blog/basics/html.md",
+      "key": "v-d7b0c048",
+      "path": "/blog/basics/html.html",
       "headers": [
         {
           "level": 2,
@@ -239,6 +319,11 @@ export const siteData = {
           "level": 3,
           "title": "用法",
           "slug": "用法"
+        },
+        {
+          "level": 2,
+          "title": "iframe 是什么、有什么缺点",
+          "slug": "iframe-是什么、有什么缺点"
         },
         {
           "level": 2,
@@ -319,8 +404,236 @@ export const siteData = {
           "level": 2,
           "title": "async 和 defer 的作用和区别",
           "slug": "async-和-defer-的作用和区别"
+        },
+        {
+          "level": 2,
+          "title": "image 和 canvas 在处理图片的区别",
+          "slug": "image-和-canvas-在处理图片的区别"
+        },
+        {
+          "level": 2,
+          "title": "HTML5",
+          "slug": "html5"
+        },
+        {
+          "level": 3,
+          "title": "HTML5 新特性",
+          "slug": "html5-新特性"
+        },
+        {
+          "level": 3,
+          "title": "新增的操作 DOM 的方法",
+          "slug": "新增的操作-dom-的方法"
+        },
+        {
+          "level": 3,
+          "title": "HTML5 本地存储概念",
+          "slug": "html5-本地存储概念"
+        },
+        {
+          "level": 3,
+          "title": "什么是 Web Worker",
+          "slug": "什么是-web-worker"
+        },
+        {
+          "level": 3,
+          "title": "HTML5 应用程序缓存和浏览器缓存有什么区别",
+          "slug": "html5-应用程序缓存和浏览器缓存有什么区别"
         }
       ]
+    },
+    {
+      "title": "JS",
+      "frontmatter": {},
+      "regularPath": "/blog/javascript/%E5%9F%BA%E7%A1%80.html",
+      "relativePath": "blog/javascript/基础.md",
+      "key": "v-feba9738",
+      "path": "/blog/javascript/%E5%9F%BA%E7%A1%80.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "<script>",
+          "slug": "script"
+        },
+        {
+          "level": 3,
+          "title": "推迟执行脚本",
+          "slug": "推迟执行脚本"
+        },
+        {
+          "level": 3,
+          "title": "异步执行脚本",
+          "slug": "异步执行脚本"
+        },
+        {
+          "level": 3,
+          "title": "动态加载脚本",
+          "slug": "动态加载脚本"
+        },
+        {
+          "level": 2,
+          "title": "var 声明提升、let 关键字、const 关键字",
+          "slug": "var-声明提升、let-关键字、const-关键字"
+        },
+        {
+          "level": 2,
+          "title": "数据类型",
+          "slug": "数据类型"
+        },
+        {
+          "level": 2,
+          "title": "typeof 与 instanceof 区别",
+          "slug": "typeof-与-instanceof-区别"
+        },
+        {
+          "level": 2,
+          "title": "for in、for of",
+          "slug": "for-in、for-of"
+        },
+        {
+          "level": 2,
+          "title": "函数传递参数",
+          "slug": "函数传递参数"
+        },
+        {
+          "level": 2,
+          "title": "执行上下文",
+          "slug": "执行上下文"
+        },
+        {
+          "level": 2,
+          "title": "标识符查找",
+          "slug": "标识符查找"
+        },
+        {
+          "level": 2,
+          "title": "原始值包装类型",
+          "slug": "原始值包装类型"
+        },
+        {
+          "level": 2,
+          "title": "string 常用方法",
+          "slug": "string-常用方法"
+        },
+        {
+          "level": 3,
+          "title": "slice()、substring()、substr()",
+          "slug": "slice-、substring-、substr"
+        },
+        {
+          "level": 3,
+          "title": "indexOf()、lastIndexOf()",
+          "slug": "indexof-、lastindexof"
+        },
+        {
+          "level": 3,
+          "title": "startsWith()、endsWith()、includes()",
+          "slug": "startswith-、endswith-、includes"
+        },
+        {
+          "level": 3,
+          "title": "trim()",
+          "slug": "trim"
+        },
+        {
+          "level": 3,
+          "title": "字符串解构",
+          "slug": "字符串解构"
+        },
+        {
+          "level": 3,
+          "title": "toLowerCase()、toUpperCase()",
+          "slug": "tolowercase-、touppercase"
+        },
+        {
+          "level": 3,
+          "title": "replace()",
+          "slug": "replace"
+        },
+        {
+          "level": 3,
+          "title": "split()",
+          "slug": "split"
+        },
+        {
+          "level": 2,
+          "title": "Math",
+          "slug": "math"
+        },
+        {
+          "level": 2,
+          "title": "Array 常用方法",
+          "slug": "array-常用方法"
+        },
+        {
+          "level": 3,
+          "title": "valueOf()",
+          "slug": "valueof"
+        },
+        {
+          "level": 3,
+          "title": "join()",
+          "slug": "join"
+        },
+        {
+          "level": 3,
+          "title": "栈方法 push()、pop()",
+          "slug": "栈方法-push-、pop"
+        },
+        {
+          "level": 3,
+          "title": "队列方法 shift()、unshift()",
+          "slug": "队列方法-shift-、unshift"
+        },
+        {
+          "level": 3,
+          "title": "排序方法 reverse()、sort()",
+          "slug": "排序方法-reverse-、sort"
+        },
+        {
+          "level": 3,
+          "title": "concat()",
+          "slug": "concat"
+        },
+        {
+          "level": 3,
+          "title": "slice()",
+          "slug": "slice"
+        },
+        {
+          "level": 3,
+          "title": "splice()",
+          "slug": "splice"
+        },
+        {
+          "level": 3,
+          "title": "indexOf()、lastIndexOf()和 includes()",
+          "slug": "indexof-、lastindexof-和-includes"
+        },
+        {
+          "level": 3,
+          "title": "find()、findIndex()",
+          "slug": "find-、findindex"
+        },
+        {
+          "level": 3,
+          "title": "迭代方法 every()、filter()、forEach()、map() 和 some()",
+          "slug": "迭代方法-every-、filter-、foreach-、map-和-some"
+        },
+        {
+          "level": 3,
+          "title": "归并方法 reduce()、reduceRight()",
+          "slug": "归并方法-reduce-、reduceright"
+        }
+      ]
+    },
+    {
+      "title": "问题",
+      "frontmatter": {},
+      "regularPath": "/blog/javascript/%E9%97%AE%E9%A2%98.html",
+      "relativePath": "blog/javascript/问题.md",
+      "key": "v-4ee5ef60",
+      "path": "/blog/javascript/%E9%97%AE%E9%A2%98.html"
     }
   ],
   "themeConfig": {
@@ -331,39 +644,58 @@ export const siteData = {
         "items": [
           {
             "text": "HTML",
-            "link": "/basics/html/"
+            "link": "/blog/basics/html"
           },
           {
             "text": "CSS",
-            "link": "/basics/css/"
+            "link": "/blog/basics/css"
           }
         ]
       },
       {
-        "text": "JS",
-        "link": "/algorithm/"
+        "text": "JavaScript",
+        "link": "/blog/javascript/基础"
       },
       {
         "text": "Vue",
         "link": "https://baidu.com"
       }
     ],
-    "sidebar": [
-      {
-        "title": "HTML+CSS",
-        "collapsable": false,
-        "children": [
-          {
-            "title": "HTML",
-            "path": "/basics/html"
-          },
-          {
-            "title": "CSS",
-            "path": "/basics/css"
-          }
-        ]
-      }
-    ],
-    "sidebarDepth": 2
+    "sidebar": {
+      "/blog/basics/": [
+        {
+          "title": "HTML+CSS",
+          "collapsable": false,
+          "sidebarDepth": 2,
+          "children": [
+            {
+              "title": "HTML",
+              "path": "/blog/basics/html"
+            },
+            {
+              "title": "CSS",
+              "path": "/blog/basics/css"
+            }
+          ]
+        }
+      ],
+      "/blog/javascript/": [
+        {
+          "title": "JavaScript",
+          "collapsable": false,
+          "sidebarDepth": 2,
+          "children": [
+            {
+              "title": "基础",
+              "path": "/blog/javascript/基础"
+            },
+            {
+              "title": "问题",
+              "path": "/blog/javascript/问题"
+            }
+          ]
+        }
+      ]
+    }
   }
 }

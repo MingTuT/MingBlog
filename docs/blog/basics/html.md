@@ -15,10 +15,9 @@ W3C标准盒模型： height = content
 ![box](./box.png)
 
 ## Doctype 作用
-DOCTYPE 是一种标准通用标记语言的文档类型声明，它的目的是要告诉标准通用标记语言解析器，
-它应该使用什么样的文档类型定义来解析文档。  
-DOCTYPE 不存在或形式不正确会导致 HTML 和 XHTML 文档以混杂模式呈现。
-
+Doctype 声明于文档最前面，告诉浏览器以何种方式来渲染页面，这里有两种模式，严格模式和混杂模式。  
+严格模式的排版和 JS 运作模式是 以该浏览器支持的最高标准运行。  
+混杂模式，向后兼容，模拟老式浏览器，防止浏览器无法兼容页面。  
 ## Label标签
 ### 作用
 label 标签用来定义表单控制间的关系，当用户选择该标签时，浏览器会自动将焦点转到和标签相关的表单控件上。
@@ -37,6 +36,13 @@ label 标签用来定义表单控制间的关系，当用户选择该标签时�
   <label><input type="input" name="uname" id="name" /></label>
 </form>
 ```
+
+## iframe 是什么、有什么缺点
++ 定义：：iframe 元素会创建包含**另一个文档**的内联框架
++ 缺点：
+  - 会阻塞主页面的 onload 事件
+  - 搜索引擎无法解读这种页面，不利于 SEO
+  - iframe 和主页面共享连接池，而浏览器对相同区域有限制所以会影响性能。
 
 ## src 与 href 的区别
 - src 用于引用资源，替换当前元素，用在 img，script，iframe 上，src 是页面内容不可缺少的一部分。
@@ -146,5 +152,74 @@ label 标签用来定义表单控制间的关系，当用户选择该标签时�
 + defer 属性表示**延迟执行**引入的 JavaScript，即这段 JavaScript 加载时， HTML 并未停止解析，这两个过程是**并行**的。当整个 document **解析完毕**后再**执行**脚本文件。
 + async 属性表示异步执行引入的 JavaScript，与 defer 的区别在于，如果已经加载好，就会开始执行，也就是说它的**执行仍然会阻塞文档的解析**，只是它的**加载过程不会阻塞**。多个脚本的执行顺序无法保证。
 
+## image 和 canvas 在处理图片的区别
++ image 是通过对象的形式描述图片的
++ canvas 通过专门的 API 将图片绘制在画布上
+
+## HTML5
+### HTML5 新特性
++ 拖拽释放(Drag and drop) API 
+  - dragstart：事件主体是被拖放元素，在开始拖放被拖放元素时触发，。
+  - darg：事件主体是被拖放元素，在正在拖放被拖放元素时触发。
+  - dragenter：事件主体是目标元素，在被拖放元素进入某元素时触发。
+  - dragover：事件主体是目标元素，在被拖放在某元素内移动时触发。
+  - dragleave：事件主体是目标元素，在被拖放元素移出目标元素是触发。
+  - drop：事件主体是目标元素，在目标元素完全接受被拖放元素时触发。
+  - dragend：事件主体是被拖放元素，在整个拖放操作结束时触发
++ 自定义属性 ( data-id 获取 li.getAttribute('data-id')或者 li.dataset.type = 'guoji' )
++ 语义化更好的内容标签（header,nav,footer,aside,article,section）
++ 音频、视频 API(audio,video)
++ 画布(Canvas)
++ 地理(Geolocation) 
++ 本地离线存储 localStorage 长期存储数据，浏览器关闭后数据不丢失
++ sessionStorage 的数据在浏览器关闭后自动删除
++ 表单控件 ( calendar、date、time、email、url、search 、tel、file、number )
++ 新的技术 webworker, websocket, Geolocation
++ 文件读取
+
+### 新增的操作 DOM 的方法
++ document.querySelector
++ document.querySelectorAll
++ document.getElementByClassName();
+
+### HTML5 本地存储概念
+::: tip 概念
+传统方式我们以document.cookie来进行存储。
+但是由于其存储大小只有 4k 左右，并且解析也相当的复杂，给开发带来诸多不便。  
+HTML5 规范则提出解决方案。HTML5 storage 提供了一种方式让网站能够把信息存储到你本地的计算机上，并再以后需要的时候进行获取。  
+这个概念和 cookie 相似，区别是它是为了更大容量存储设计的。
+:::
+
+**cookies 兼容所有的浏览器，HTML5 提供的 storage 存储方式**
++ Document.cookie
+  - 当 web 服务器向浏览器发送 web 页面时，在连接关闭后，服务端不会记录用户的信息。Cookie 的作用就是用于解决 "如何记录客户端的用户信息"
+  - 创建cookie时没有设置过期时间，即没有设置expires或者max-age值，则该cookie只存在与会话中，此时，cookie存储在浏览器的内存中，关闭浏览器时cookie自动消失。
+  - 如果设置了过期时间，则cookie存储在用户的硬盘上。
++ Window.sessionstorage
+  - sessionStorage 的存储大小约 5M
+  - 仅在当前浏览器窗口关闭前有效，自然也就不可能持久保持
++ Window.localstorage
+  - localstorage 的存储大小约 20M
+  - 始终有效，窗口或浏览器关闭也一直保存，因此用作持久数据  
+
+**作用域：**
++ sessionStorage 不在不同的浏览器窗口中共享，即使是同一个页面
++ localStorage 在所有同源窗口中都是共享的
++ cookie 也是在所有同源窗口中都是共享的
+
+### 什么是 Web Worker
+当在 HTML 页面中执行脚本时，页面的状态是不可响应的，直到脚本已完成。  
+web worker 是运行在后台的 JavaScript，独立于其他脚本，不会影响页面的性能。您可以继续做任何愿意做的事情：点击、选取内容等等，而此时 web worker 在后台运行。
+
+### HTML5 应用程序缓存和浏览器缓存有什么区别
+应用程序缓存是 HTML5 的重要特性之一，提供了离线使用功能，让应用程序可以获取本地的网站内容，例如 HTML、CSS、图片以及 Javascript。这个特性可以提高网站性能，它的实现借助于 manifest 文件，代码如下：  
+`<!doctype html>
+<html manifest="example.appcache">
+....</html>`   
+与传统浏览器缓存相比，它不强制用户访问的网站内容被缓存。
+
+1. 浏览器缓存针对单个文件,H5离线缓存针对整个应用
+2. H5缓存断网还能用,浏览器缓存断网就用不了
+3. H5缓存核心是applicationCache对象,浏览器缓存核心是cache-control
 
 
