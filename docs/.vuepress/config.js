@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Ming\'s blog',
+  title: 'Ming\'s Notebook',
   description: '记录所学知识',
   head: [ // 注入到当前页面的 HTML <head> 中的标签
   ],
@@ -11,6 +11,7 @@ module.exports = {
     logo: '/Ming.jpg',
     // 导航栏配置
     nav: [
+      { text: 'JavaScript', link: '/blog/javascript/基础' },
       {
         text: 'HTML+CSS',
         items: [
@@ -18,8 +19,6 @@ module.exports = {
           { text: 'CSS', link: '/blog/basics/css' }
         ]
       },
-      { text: 'JavaScript', link: '/blog/javascript/基础' },
-      
       { text: 'Vue', link: 'https://baidu.com' }
     ],
     sidebar: {
