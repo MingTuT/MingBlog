@@ -19,7 +19,8 @@ module.exports = {
           { text: 'CSS', link: '/blog/basics/css' }
         ]
       },
-      { text: 'Vue', link: 'https://baidu.com' }
+      { text: 'Vue', link: '/blog/vue/基础' }
+
     ],
     sidebar: {
       '/blog/basics/': [{
@@ -40,6 +41,15 @@ module.exports = {
         { title: '问题', path:'/blog/javascript/问题' }
       ]
     }],
+    '/blog/vue/': [{
+      title: 'Vue',
+      collapsable: false,
+      sidebarDepth: 2,
+      children: [
+        { title: '基础', path:'/blog/vue/基础' },
+        // { title: '问题', path:'/blog/vue/问题' }
+      ]
+    }]
       
     }
 

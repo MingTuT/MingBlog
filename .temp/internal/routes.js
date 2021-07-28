@@ -21,6 +21,46 @@ export const routes = [
     redirect: "/"
   },
   {
+    name: "v-feba9738",
+    path: "/blog/javascript/%E5%9F%BA%E7%A1%80.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-feba9738").then(next)
+    },
+  },
+  {
+    path: "/blog/javascript/基础.html",
+    redirect: "/blog/javascript/%E5%9F%BA%E7%A1%80.html"
+  },
+  {
+    path: "/blog/javascript/基础.html",
+    redirect: "/blog/javascript/%E5%9F%BA%E7%A1%80.html"
+  },
+  {
+    name: "v-f76242b0",
+    path: "/blog/vue/%E5%9F%BA%E7%A1%80.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-f76242b0").then(next)
+    },
+  },
+  {
+    path: "/blog/vue/基础.html",
+    redirect: "/blog/vue/%E5%9F%BA%E7%A1%80.html"
+  },
+  {
+    path: "/blog/vue/基础.html",
+    redirect: "/blog/vue/%E5%9F%BA%E7%A1%80.html"
+  },
+  {
+    name: "v-b8c4d480",
+    path: "/blog/basics/css.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-b8c4d480").then(next)
+    },
+  },
+  {
     name: "v-d7b0c048",
     path: "/blog/basics/html.html",
     component: GlobalLayout,
@@ -43,30 +83,6 @@ export const routes = [
   {
     path: "/blog/javascript/问题.html",
     redirect: "/blog/javascript/%E9%97%AE%E9%A2%98.html"
-  },
-  {
-    name: "v-feba9738",
-    path: "/blog/javascript/%E5%9F%BA%E7%A1%80.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-feba9738").then(next)
-    },
-  },
-  {
-    path: "/blog/javascript/基础.html",
-    redirect: "/blog/javascript/%E5%9F%BA%E7%A1%80.html"
-  },
-  {
-    path: "/blog/javascript/基础.html",
-    redirect: "/blog/javascript/%E5%9F%BA%E7%A1%80.html"
-  },
-  {
-    name: "v-b8c4d480",
-    path: "/blog/basics/css.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-b8c4d480").then(next)
-    },
   },
   {
     path: '*',
